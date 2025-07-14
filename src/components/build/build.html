@@ -1,1 +1,60 @@
-<p>build works!</p>
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+    <mat-card class="w-full max-w-md p-8 rounded-lg shadow-lg">
+        <mat-card-title class="text-center text-3xl font-bold text-gray-800 mb-6">Configuration Form</mat-card-title>
+        <mat-card-content>
+            <form class="space-y-6">
+                <!-- Dropdown 1 -->
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Select Option 1</mat-label>
+                    <mat-select [(ngModel)]="selectedOption1" name="dropdown1">
+                        <mat-option value="option1a">Option 1A</mat-option>
+                        <mat-option value="option1b">Option 1B</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Dropdown 2 -->
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Select Option 2</mat-label>
+                    <mat-select [(ngModel)]="selectedOption2" name="dropdown2">
+                        <mat-option value="option2a">Option 2A</mat-option>
+                        <mat-option value="option2b">Option 2B</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Dropdown 3 -->
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Select Option 3</mat-label>
+                    <mat-select [(ngModel)]="selectedOption3" name="dropdown3">
+                        <mat-option value="option3a">Option 3A</mat-option>
+                        <mat-option value="option3b">Option 3B</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Dropdown 4 -->
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Select Option 4</mat-label>
+                    <mat-select [(ngModel)]="selectedOption4" name="dropdown4">
+                        <mat-option value="option4a">Option 4A</mat-option>
+                        <mat-option value="option4b">Option 4B</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <!-- Input Field -->
+                <mat-form-field appearance="outline" class="w-full">
+                    <mat-label>Enter Value</mat-label>
+                    <input matInput [(ngModel)]="inputValue" name="inputField" placeholder="Type something here...">
+                </mat-form-field>
+
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-4 pt-4">
+                    <button mat-raised-button color="primary" (click)="onBuild()">
+                        Build
+                    </button>
+                    <button mat-stroked-button color="warn" (click)="onCancel()">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
