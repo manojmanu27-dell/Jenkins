@@ -18,8 +18,8 @@ export class Build {
  public readonly env = "dit";
 
  public navigateToHome(){
-      const host = window.location.origin;
-    window.open(host + "/#/home", "_self");
+      const host = window.location.origin + window.location.pathname;
+    window.open(host + "#/home", "_self");
     window.location.reload();
  }
 }
