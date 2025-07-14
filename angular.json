@@ -18,6 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
               "baseHref": "/Jenkins/",
+              "outputPath":"docs/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
