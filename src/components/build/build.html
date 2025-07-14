@@ -1,8 +1,41 @@
-<mat-form-field>
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-
-      <mat-option value="food">viewValue</mat-option>
-    
-  </mat-select>
-</mat-form-field>
+<div class="build-menu">
+  <h1>Build your page</h1>
+  <div class="fields">
+    <div class="input-fields">
+      <mat-label>Script:</mat-label>
+      <mat-form-field class="w-100 mt-1">
+        <mat-select [(ngModel)]="script">
+            <mat-option value="inserIntoDynamoDB.js" selected>inserIntoDynamoDB.js</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+     <div class="input-fields">
+      <mat-label>Region:</mat-label>
+      <mat-form-field class="w-100 mt-1">
+        <mat-select [(ngModel)]="region">
+            <mat-option value="us-east-1" selected>us-east-1</mat-option>
+             <mat-option value="us-east-2" selected>us-east-2</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+     <div class="input-fields">
+      <mat-label>File Name:</mat-label>
+      <mat-form-field class="w-100 mt-1">
+    <input matInput placeholder="Ex. test.json" value="test-name.json">
+      </mat-form-field>
+    </div>
+     <div class="input-fields">
+      <mat-label>Env</mat-label>
+      <mat-form-field class="w-100 mt-1">
+        <mat-select [(ngModel)]="env">
+            <mat-option value="dit" selected>dit</mat-option>
+            <mat-option value="qa">qa</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="submit-build">
+       <button matButton="filled" (click)="navigateToHome()">Build</button>
+         <button matButton>Cancel</button>
+    </div>
+  </div>
+</div>

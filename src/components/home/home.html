@@ -1,1 +1,11 @@
-<p>home works!</p>
+<h1>Home</h1>
+<div class="progress-bar">
+    @if(showProgressBar){
+
+        <h4>Please wait while your build is happening</h4>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    } @else{
+       <h4>Build Success</h4>
+    }
+</div>
+    
